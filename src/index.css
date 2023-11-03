@@ -1,0 +1,238 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:rgb(10, 173, 10);
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+    font-family: var(--font-family) !important;
+    overflow-x: hidden;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black !important;
+    text-decoration: none !important;
+}
+.product{
+    transition: all 0.5s;
+    box-shadow: 0 0 13px 5px  rgba(100, 230, 100, 0.1);
+    overflow: hidden;
+}
+.product:hover
+{   
+    box-shadow: 0 0 10px 5px rgb(10, 173, 10,0.5);
+}
+.product img{
+    transition: all 0.5s;
+}
+.photo{
+    overflow: hidden;
+}
+.product:hover img{
+    transform: scale(1.1);
+}
+/* .product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+} */
+/* .product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+} */
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+.dtn-count:hover{
+    background-color: var(--main-color) !important;
+    color: white !important;
+
+}
+ .fs-badge{
+    padding: 5px;
+    font-size: 10px;
+    top: -45%;
+} 
+.fa-shopping-cart{
+    font-size: 1.5rem;
+}
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; 
+  }
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .heart {
+    right: 10px;
+    z-index: 99999;
+  }
+  .border-bottom-green {
+    width: 70%;
+    margin: 0 auto; /* Centers the border horizontally */
+    border-bottom: 1px solid  var(--main-color); /* Sets the border color and thickness */
+  }
+
+
+
+
+  /* Style for the scrollbar track */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+
+  }
+  
+  /* Style for the scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color); /* Green color for the scrollbar handle */
+    border-radius: 4px; /* Rounded corners of the scrollbar handle */
+}
+  
+  /* Style for the scrollbar track on hover */
+  ::-webkit-scrollbar-track:hover {
+    background-color: transparent; /* Light gray color for the scrollbar track on hover */
+  }
+  
+  /* Style for the scrollbar handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-color); /* Darker green color for the scrollbar handle on hover */
+  }
+
+/* Apply the custom cursor style to all elements */
+
+
+.fa-circle-user{
+    color: #0aad0a;
+    font-size: 27px;
+}
+
+
+/* Navbar.css */
+
+.navbar {
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .nav-link {
+    color: #333;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+  }
+  .hight{
+    height: 350px;
+  }
+  .hight-brands{
+    height: 230px;
+  }
+  
+  .fa-heart,
+  .fa-shopping-cart {
+    position: relative;
+  }
+  
+  
+  .dropdown-icon {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -90%;
+    z-index:99999999;
+    display: block;
+    min-width: 160px;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: center;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .dropdown-menu a:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+  
+  .dropdown-menu a:hover,
+  .dropdown-menu a:focus {
+    color: #1e2125;
+    text-decoration: none;
+    background-color: #f8f9fa;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .smail-photo{
+      display: none;
+    }
+  }
