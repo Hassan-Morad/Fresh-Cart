@@ -141,7 +141,7 @@ return () => {
           </div>
           <div className="m-auto  d-flex align-items-center justify-content-center">
             <Link
-              className="nav-link active mt-3   text-primary"
+              className="nav-link active mt-3 fs-6  text-primary"
               aria-current="page"
               to="/forgotpassword"
             >
@@ -149,7 +149,7 @@ return () => {
             </Link>
             <span className="mt-3 mx-2">|</span>
             <Link
-              className="nav-link active mt-3 "
+              className="nav-link fs-6 active mt-3 "
               aria-current="page"
               to="/register"
             >
