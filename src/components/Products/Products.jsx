@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { wishlistContext } from "../../Context/WishlistContext";
 import LoadingScreen from "./../loadingScreen/loadingScreen";
 import { Helmet } from "react-helmet";
+import { tokenContext } from "../../Context/TokenContext";
 
 export default function Products() {
   function getProducts() {
@@ -14,27 +15,27 @@ export default function Products() {
   }
   let { data, isLoading } = useQuery("products", getProducts);
   let { addToCart, setNumOfCartItems } = useContext(CartContext);
+  let { setToken } = useContext(tokenContext);
   const [isLoadingCart, setIsLoadingCart] = useState(false);
   const [isLoadingLove, setIsLoadingLove] = useState(false);
   async function addCart(id) {
     setIsLoadingCart(true); // Set isLoadingCart to true when adding to cart
     let response = await addToCart(id);
-    console.log(response);
     if (response?.data.status === "success") {
       setNumOfCartItems(response.data.numOfCartItems);
-
-      toast.success("It has been successfully added.", {
+      toast.success("Product is added successfully", {
         duration: 4000,
         position: "top-right",
         className: "bg-success text-white p-3",
       });
     } else {
-      toast.error("It has been successfully added.", {
+      toast.error("error adding product to cart", {
         duration: 4000,
         position: "top-right",
         className: "bg-danger text-white p-3",
       });
     }
+    console.log(response);
     setIsLoadingCart(false); // Set isLoadingCart to false after adding to cart
   }
   const {
@@ -80,6 +81,7 @@ export default function Products() {
     setIsLoadingLove(false);  
   }
   useEffect(() => {
+    setToken(localStorage.getItem('userToken'))
     getLoggedUserWishlist();  
   },[getLoggedUserWishlist]);
  

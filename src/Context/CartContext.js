@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 export let CartContext = createContext();
 
 

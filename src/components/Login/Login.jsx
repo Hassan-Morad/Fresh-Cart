@@ -26,6 +26,7 @@ export default function Login() {
         setError(err.response.data.message);
       });
     if (data.message === "success") {
+      console.log(data);
       await setToken(data.token);
       localStorage.setItem("userToken", data.token);
       await getIntialCart();
@@ -140,13 +141,13 @@ return () => {
           </div>
           <div className="m-auto  d-flex align-items-center justify-content-center">
             <Link
-              className="nav-link active mt-3  text-primary"
+              className="nav-link active mt-3   text-primary"
               aria-current="page"
               to="/forgotpassword"
             >
               Forgot Password? 
             </Link>
-            <span className="mt-3 mx-3">|</span>
+            <span className="mt-3 mx-2">|</span>
             <Link
               className="nav-link active mt-3 "
               aria-current="page"

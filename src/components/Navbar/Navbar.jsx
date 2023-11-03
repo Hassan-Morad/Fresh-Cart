@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="px-3 navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="px-3  navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link className="navbar-brand" to="">
             <img src={Logo} alt="Fresh Logo" />
