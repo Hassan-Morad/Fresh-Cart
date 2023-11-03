@@ -78,7 +78,7 @@ export default function CartContextProvider(props) {
       .catch((err) => err);
   }
   function onlinePayment(shippingAddress) {
-    const redirectURL = 'https://fresh-cart-topaz.vercel.app';
+    const redirectURL = 'https://fresh-cart-hassan.vercel.app';
 
     return axios
       .post(
