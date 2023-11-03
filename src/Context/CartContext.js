@@ -77,7 +77,7 @@ export default function CartContextProvider(props) {
       .catch((err) => err);
   }
   function onlinePayment(shippingAddress) {
-    const redirectURL = 'https://hassan-morad.github.io/E-Commerce-Fresh-Cart-';
+    const redirectURL = 'https://fresh-cart-topaz.vercel.app';
 
     return axios
       .post(
