@@ -139,17 +139,17 @@ return () => {
             )}
             
           </div>
-          <div className="m-auto  d-flex align-items-center justify-content-center">
+          <div className="m-auto mt-3  d-flex align-items-center justify-content-center">
             <Link
-              className=" active mt-3 fs-6  text-primary"
+              className="nav-link active fs-6  text-primary"
               aria-current="page"
               to="/forgotpassword"
             >
               Forgot Password? 
             </Link>
-            <span className="mt-3 mx-1 mx-sm-2">|</span>
+            <span className="mx-0 mx-sm-2">|</span>
             <Link
-              className=" fs-6 active mt-3 "
+              className="nav-link fs-6 active  "
               aria-current="page"
               to="/register"
             >
