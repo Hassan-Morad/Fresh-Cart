@@ -117,17 +117,7 @@ export default function Wishlist() {
                       </div>
                       <div className="col-lg-6 text-lg-end mt-3 mt-lg-0">
                         <div className="row g-2 align-items-stretch">
-                          <div className="col-lg-6">
-                            <button
-                              className="btn  btn-outline-danger me-lg-3  d-block w-100 h-100"
-                              onClick={() => {
-                                removewishlistItem(product._id);
-                              }}
-                            >
-                              <i className="fa-solid fa-trash me-2 "></i> Remove
-                            </button>
-                          </div>
-                          <div className="col-lg-6">
+                        <div className="col-lg-6">
                             {" "}
                             <button
                               className="btn  border border-success dtn-count d-block w-100 h-100"
@@ -138,6 +128,17 @@ export default function Wishlist() {
                               Cart
                             </button>
                           </div>
+                          <div className="col-lg-6">
+                            <button
+                              className="btn  btn-outline-danger me-lg-3  d-block w-100 h-100"
+                              onClick={() => {
+                                removewishlistItem(product._id);
+                              }}
+                            >
+                              <i className="fa-solid fa-trash me-2 "></i> Remove
+                            </button>
+                          </div>
+                          
                         </div>
                       </div>
                     </div>

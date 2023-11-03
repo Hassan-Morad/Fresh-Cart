@@ -46,7 +46,7 @@ export default function Register() {
       .matches(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, "Email not valid")
       .required("Email is required"),
     password: Yup.string()
-      .matches(/^(?=.*[A-Z]).{6,}$/, "Password not valid")
+      .matches(/^(?=.*[A-Z]).{6,}$/, "Password must contain capital letter")
       .required("Password is required"),
     rePassword: Yup.string()
       .oneOf([Yup.ref("password")], "Repassword does not match")
